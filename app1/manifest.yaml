@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: joindevops/app1:1.0
+        image: kbandari26/app1:1.0
 ---
 apiVersion: v1
 kind: Service
@@ -43,11 +43,11 @@ metadata:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
-    alb.ingress.kubernetes.io/group.name: joindevops
+    alb.ingress.kubernetes.io/group.name: kbandari26
 spec:
   ingressClassName: alb
   rules:
-  - host: "app1.daws78s.online" # ALB Rule
+  - host: "app1.bigdatatest.sbs" # ALB Rule
     http:
       paths:
       - pathType: Prefix
